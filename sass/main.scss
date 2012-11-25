@@ -78,7 +78,7 @@ div {
     background-color: $background; 
     paddding-left: 2%;
     padding-right: 3%;
-    padding-bottom: 10%;
+    padding-bottom: 9%;
     @include corners(darken($background, 30%), 5px, 0px, 0px, 5px);
     border-radius: 5px 0px 0px 0px; 
       -moz-border-radius: 5px 0px 0px 0px; 
@@ -89,15 +89,23 @@ div {
     line-height: 1.5em;
     margin-bottom: 2em;
 
+    // Inner Container Global Rules
+    .innerContainer {
+        padding: 1% 3% 1% 3%;
+    }
+
     //Section Classes
     /* Container for About Pages */
     .about {
+        @extend .innerContainer;
+
         padding: 1% 3% 5% 2%;
+
+
      }
      /* Containers for Homepage */
     .resume {
-        padding-left: 3%;
-
+        @extend .innerContainer;
         .education, .job {
             margin-bottom: 1em;
             h2, h3, h4, {
@@ -136,6 +144,7 @@ div {
                 }
             }
         }
+        /* First Paragraph style */
         .profile {
             text-align: justify; 
             width: 66%;
@@ -148,10 +157,65 @@ div {
              @include marginCenter;
         }
     } // End Resume - Home 
+
     /* container class for portfolio */
     .projects {
-         font: black;
-    }
+        @extend .innerContainer;
+
+        /* Project Title */ 
+        .headers {
+            font: {
+                size: 1.1em;
+                family: $fontSpecial;
+                font-weight: 600;
+            }
+        }
+
+        h3 {
+            @extend .headers;
+            float: left;
+            text-align: left;
+            margin-left: 5%;
+        }
+        h4 {
+            @extend .headers;
+            float: right;
+            clear: left;
+            text-align: right;
+        }
+        hr {
+            width: 75%;
+            height: 1%;
+
+            color: $sidebar;
+            background-color: $sidebar;
+
+            @include corners(darken($sidebar, 16%), 3px, 3px, 3px, 3px);
+        }
+        img {
+            float: left;
+            clear: right;
+            margin-right: 2%;
+
+            width: 250px;
+            height: 137px;
+        }
+        p {
+            clear: right;
+        }
+
+        .readMore {
+            clear: left;
+            float: right;
+            text-align: right;
+
+            font: {
+                weight: 600;
+                style: italic;
+            }
+        }
+        
+    } //End .projects
 } // End Content   
 
 // Start Sidebar
@@ -175,7 +239,7 @@ div {
         line-height: 1.5em;
 
     }
-
+    /* Sidebar Link Appearance */
     a {
         color: #000000;
         border: 3px solid transparent;
@@ -197,6 +261,8 @@ div {
     }
 }
 
+
+/* Footer Style Rules */
 #footer {
     width: 100%;
     height: $footerHeight;
