@@ -29,7 +29,7 @@ a {
         @include corners(#34d0ba, 5px, 5px, 5px, 5px);
     }
     &:visited {
-        color: $background;
+        color: #052C6E; // xs$pageBackground;
     }
 }
 
