@@ -12,15 +12,16 @@ body {
         family: $fontFam;
     }
     line-height: 1.2em;
-    
-    background: darken($background, 30%);
-
+    background: $pageBackground;
     margin-bottom: $footerHeight;
 }
 
 a {
-    color: #00685A;
+    color: $pageBackground; // darken(#00685A, 20%);
     border: 3px solid transparent;
+    font: {
+        family: $fontFam;
+    }
     &:hover { 
         background-color: #34D0BA;
         color: #A64500;
@@ -28,7 +29,7 @@ a {
         @include corners(#34d0ba, 5px, 5px, 5px, 5px);
     }
     &:visited {
-        color: #00A08A;
+        color: $background;
     }
 }
 
@@ -245,6 +246,9 @@ div {
         color: #000000;
         border: 3px solid transparent;
         text-decoration: none; 
+        font: {
+            family: $fontSidebar;
+        }
         &:hover { 
             background-color: #00A08A;
             color: #000000;

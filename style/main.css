@@ -8,8 +8,9 @@ body {
   margin-bottom: 60px; }
 
 a {
-  color: #00685A;
-  border: 3px solid transparent; }
+  color: #a64500;
+  border: 3px solid transparent;
+  font-family: "Fenix", serif; }
   a:hover {
     background-color: #34D0BA;
     color: #A64500;
@@ -19,7 +20,7 @@ a {
     -webkit-border-radius: 5px 5px 5px 5px;
     border: 3px solid #34d0ba; }
   a:visited {
-    color: #00A08A; }
+    color: #ff8f40; }
 
 div {
   -webkit-box-sizing: border-box;
@@ -173,7 +174,8 @@ div {
   .sidebar a {
     color: #000000;
     border: 3px solid transparent;
-    text-decoration: none; }
+    text-decoration: none;
+    font-family: Anton, Impact, sans-serif; }
     .sidebar a:hover {
       background-color: #00A08A;
       color: #000000;

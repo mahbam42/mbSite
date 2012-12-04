@@ -11,8 +11,11 @@ $text: #1E786C;
 // Color for Sidebar and Footer 
 $sidebar: #ffad73;
 
-// Background 
+// Content Background 
 $background: #ff8f40;
+
+// Page Background 
+$pageBackground: darken($background, 30%);
 
 
 // Dimensions 
