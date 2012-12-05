@@ -17,7 +17,7 @@ body {
 }
 
 a {
-    color: $pageBackground; // darken(#00685A, 20%);
+    color: #052C6E;
     border: 3px solid transparent;
     font: {
         family: $fontFam;
@@ -29,7 +29,7 @@ a {
         @include corners(#34d0ba, 5px, 5px, 5px, 5px);
     }
     &:visited {
-        color: #052C6E; // xs$pageBackground;
+        color: #052C6E; // $pageBackground;
     }
 }
 
